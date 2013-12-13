@@ -120,8 +120,8 @@ angular.module('ui.bootstrap.modal', [])
         return topBackdropIndex;
       }
 
-      $rootScope.$watch(openedWindows.length, function(noOfModals){
-        body.toggleClass('modal-open', openedWindows.length() > 0);
+      $rootScope.$watch(openedWindows.length(), function(noOfModals){
+        body.toggleClass('modal-open', noOfModals > 0);
       });
 
       $rootScope.$watch(backdropIndex, function(newBackdropIndex){
